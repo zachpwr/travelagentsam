@@ -2,13 +2,32 @@
 <html>
 <head>
   <title>Travelagentsam</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900,500' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+    <div class="container-fluid v-stretch">
+        <%= render 'shared/topbar' %>
+        <div class="row">
+            <div class="sidebar v-stretch col-xs-2 no-gutter">
+                <%= render 'shared/sidebar' %>
+            </div>
+            <div class="page-content col-xs-10 col-xs-offset-2 no-gutter v-stretch">
+                <%= yield %>
+            </div>
+        </div>
+    </div>
+    <div class="logo-overlay">
+        <div class="overlay-content">
+            <%= image_tag "logo.png", class: 'logo' %>
+            <%= image_tag "loader.png", class: 'loader' %>
+        </div>
+    </div>
 
 </body>
 </html>
