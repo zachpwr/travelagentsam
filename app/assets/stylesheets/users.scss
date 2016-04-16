@@ -1,3 +1,41 @@
-// Place all the styles related to the users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.page-content {
+    .jumbotron {
+        border-radius: 0px;
+        background-image: url('https://farm1.staticflickr.com/105/258014588_03d07c547a_o_d.jpg');
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+        margin-bottom: 15px;
+        background-color: #AAAAAA;
+
+        h1 {
+            font-weight: 300;
+            color: #FFFFFF;
+            margin-top: 50px;
+            font-size: 50px;
+        }
+
+        h2 {
+            font-weight: 100;
+            color: #FFFFFF;
+            margin-top: 0px;
+            font-size: 30px;
+        }
+
+        .btn {
+            margin-top: 30px;
+            margin-bottom: 50px;
+            background-color: transparent;
+            border: 1px solid white;
+            color: white;
+            text-transform: uppercase;
+            font-weight: 300;
+            transition: background-color 0.25s;
+
+            &:hover {
+                background-color: rgba(255,255,255,0.25);
+            }
+        }
+    }
+}
