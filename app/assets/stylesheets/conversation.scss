@@ -1,0 +1,111 @@
+.conversation-container {
+    .panel {
+        border-radius: 0px;
+        box-shadow: 0 2px 3px rgba(0,0,0,0.3) !important;
+        margin-bottom: 15px;
+
+        .animation {
+            min-height: 100%;
+        }
+
+        .messages {
+            border-left: 1px solid rgba(0,0,0,0.1);
+            padding-right: 0px;
+            height: 500px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+
+            .message-received {
+                display: block;
+                margin-bottom: 5px;
+                text-align: left;
+
+                .message-content {
+                    color: $sidebar-text;
+                    background-color: $sidebar-background;
+                    display: inline-block;
+                    padding: 10px 15px;
+                    border-radius: 20px;
+                    position: relative;
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        left: -1px;
+                        top: 30px;
+                        width: 0;
+                        height: 0;
+                        border-top: 7px solid transparent;
+                        border-right: 10px solid $sidebar-background;
+                        border-bottom: 7px solid transparent;
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+
+            .message-sent {
+                display: block;
+                margin-bottom: 5px;
+                text-align: right;
+
+                .message-content {
+                    color: $logo-color;
+                    background-color: $topbar-background;
+                    display: inline-block;
+                    padding: 10px 15px;
+                    border-radius: 20px;
+                    position: relative;
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        right: -1px;
+                        top: 30px;
+                        width: 0;
+                        height: 0;
+                        border-top: 7px solid transparent;
+                        border-left: 10px solid $topbar-background;
+                        border-bottom: 7px solid transparent;
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+        }
+
+        .panel-footer {
+            border-radius: 0px;
+
+            .chat-input {
+                padding-right: 0px;
+                border-left: 1px dotted rgba(0,0,0,0.1);
+
+                * {
+                    border-radius: 0px;
+                }
+
+                .btn {
+                    background-color: $topbar-background;
+                    border-color: #c94a50;
+                }
+            }
+
+            .emoji-button-container {
+                padding-left: 0px;
+
+                .emoji-button {
+                    border-radius: 0px;
+                    width: 100%;
+
+                    .caret {
+                        float: right;
+                        margin-top: 9px;
+                    }
+                }
+
+                .dropdown-menu {
+                    border-radius: 0px;
+                }
+            }
+        }
+    }
+}

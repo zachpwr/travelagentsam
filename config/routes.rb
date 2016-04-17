@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   resources :places
     root "users#index"
     resources :users
+
+    get 'conversation' => 'conversation#index'
+    get 'conversation/respond' => 'conversation#respond'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
