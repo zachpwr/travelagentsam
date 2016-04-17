@@ -13,6 +13,7 @@
 
 // Page-specific Stylesheets
 @import "users";
+@import "places";
 
 // Global Styles
 html {
@@ -168,6 +169,47 @@ html {
             }
 
             .calltoaction {
+                border-radius: 0px;
+                border: none;
+                padding: 0px;
+                box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+                margin-bottom: 30px;
+                text-decoration: none;
+                transition: transform 0.25s, box-shadow 0.25s;
+
+                a {
+                    border: none;
+                    text-decoration: none;
+                }
+
+                img {
+                    width: 100%;
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+
+                .caption {
+                    background-color: #FFFFFF;
+                    padding: 15px;
+                    text-align: center;
+
+                    h3 {
+                        margin: 0px;
+                        font-size: 14px;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        color: #000000;
+                    }
+                }
+
+                &:hover {
+                    transform: scale(1.02);
+                    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+                }
+            }
+
+            .thumb {
                 border-radius: 0px;
                 border: none;
                 padding: 0px;
